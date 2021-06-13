@@ -6,6 +6,7 @@ runtime:
     extensions:
         - apcu
         - mbstring
+        - pdo_pgsql
         - sodium
         - iconv
         - ctype
@@ -20,6 +21,9 @@ build:
     flavor: none
 
 disk: 512
+
+relationships:
+    database: "db:postgresql"
 
 web:
     locations:
